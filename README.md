@@ -1,7 +1,5 @@
 # Test
 
-## 克隆版本库
-
-操作示例：
+## Clone it:
 
     $ git clone git://github.com/johnny-lv/toolv.git
