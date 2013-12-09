@@ -35,9 +35,30 @@ module.exports = function(grunt) {
         tasks: ['jshint:test', 'nodeunit']
       },
     },
+    shell: {
+        loadData: {
+            options: {
+                stdout: true,
+                failOnError: true
+            },
+            command: ['mongoose-fixture --fixture=all --remove', 'mongoose-fixture --fixture=all --add'].join('&&')
+        },
+        purge: {
+            options: {
+                stdout: true,
+                failOnError: true
+            },
+            command: 'mongoose-fixture --fixture=all --remove'
+        }
+    }
   });
+
+  // Load task.
+  grunt.loadNpmTasks('grunt-shell');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'nodeunit']);
+  grunt.registerTask('init', ['shell:loadData']);
+  grunt.registerTask('purge', ['shell:purge']);
 
 };
