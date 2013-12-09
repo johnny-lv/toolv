@@ -1,28 +1,19 @@
-# Xcode
-build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-*.xcworkspace
-!default.xcworkspace
-xcuserdata
-*.moved-aside
-DerivedData
-RestKit/
-
-# OSX Noise
-.DS_Store
-profile
-*~
-*.lock
-*.DS_Store
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
 *.out
-.idea/
-.gitmodules
+*.pid
+*.gz
+.DS_Store
+*.swp
+*.swo
 
-Pods/*
+pids
+logs
+results
+test.js
+
+npm-debug.log
+node_modules
