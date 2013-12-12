@@ -7,20 +7,6 @@ module.exports = function(grunt) {
     nodeunit: {
       files: ['test/**/*_test.js'],
     },
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      gruntfile: {
-        src: 'Gruntfile.js'
-      },
-      lib: {
-        src: ['lib/**/*.js']
-      },
-      test: {
-        src: ['test/**/*.js']
-      },
-    },
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
@@ -50,15 +36,22 @@ module.exports = function(grunt) {
             },
             command: 'mongoose-fixture --fixture=all --remove'
         }
+    },
+    jshint: {
+        options: {
+            jshintrc: '.jshintrc'
+        },
+        all: ['Gruntfile.js', '**/*.js', '!node_modules/*.js']
     }
   });
 
   // Load task.
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'nodeunit']);
-  grunt.registerTask('init', ['shell:loadData']);
+  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('init', ['shell:loadDta']);
   grunt.registerTask('purge', ['shell:purge']);
 
 };

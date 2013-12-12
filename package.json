@@ -29,7 +29,8 @@
  },
   "devDependencies": {
     "grunt": "*",
-    "grunt-shell": "*"
+    "grunt-shell": "*",
+    "grunt-contrib-jshint": "*"
   },
   "keywords": []
 }
