@@ -1,13 +1,11 @@
+#!/bin/sh
 # - Update apt-get
-sudo apt-get update
-sudo apt-get upgrade
-
-installZSH();
-installGit();
+#sudo apt-get update
+#sudo apt-get upgrade
 
 
 ## Install zsh
-function installZSH() {
+installZsh() {
   echo "## Start installing zsh..."
   sudo apt-get install zsh
   wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh 
@@ -17,8 +15,12 @@ function installZSH() {
 }
 
 ## Install git
-function installGit() {
+installGit() {
   echo "## Start installing git..."
   sudo apt-get install git
   echo "## Installed successfully."
 }
+
+
+installZsh
+installGit
