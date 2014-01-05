@@ -33,7 +33,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 read -p "Ready to install?" RESP
-if ["$RESP" = "y"]; then
+if [ "$RESP" = "y" ]; then
     echo ">>>>>>>>>>>>Now begin!"
     #installGit
     #installZsh
