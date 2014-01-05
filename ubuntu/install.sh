@@ -1,4 +1,5 @@
 #!/bin/bash
+#Author: Johnny.Lv
 
 # - Install Misc
 installMisc() {
