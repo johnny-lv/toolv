@@ -10,6 +10,8 @@ lib-cov
 *.swp
 *.swo
 
+.idea
+
 pids
 logs
 results

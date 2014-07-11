@@ -83,6 +83,21 @@
 					<td class="position"><div class="display"><%= position %></div><div class="edit"><input class="position" name="position"></input></div></td>
 					<td><a href="#" class="del">删除</a></td>
     	</script>
-	</div>
+    </div>
+
+    <script id="main-layout" type="layout">
+          <section class="content"></section>
+
+            <!-- Login template below will be injected here -->
+              <aside class="secondary"></aside>
+          </script>
+
+          <script id="login-template" type="template">
+                <form class="login">
+                        <p><label for="user">Username</label><input type="text" name="user"></p>
+                            <p><label for="pass">Password</label><input type="text" name="pass"></p>
+                                <p><input class="loginBtn" type="submit" value="Login"></p>
+                                  </form>
+                              </script>
 </body>
 </html>
